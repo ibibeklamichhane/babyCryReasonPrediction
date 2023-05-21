@@ -1,0 +1,33 @@
+{% extends 'predictor/base.html' %}
+{% include 'predictor/navbar.html' %}
+
+{% block content %}
+
+
+<form id="soundupload" method="post" enctype="multipart/form-data" id="inputform" action="predictor/">
+  {% csrf_token %}
+
+<div class="wrapper">
+  <div class="container">
+    
+    <div class="upload-container">
+      <h1 style="font-family: 'Preeti'">जाँच गर्न फाइल अपलोड गर्नुहोस्</h1>
+      <div class="border-container">
+        <div class="icons fa-4x">
+          <i class="fas fa-upload" data-fa-transform="shrink-3 down-2 left-6 rotate--45"></i>
+        </div>
+        <p>Drag and drop files here</p> or<br>
+         
+        <label for="audio_file">Upload audio file:</label>
+        <input type="file" name="audio_file" id="audio_file" />
+         
+        <button style="font-family: 'Preeti'" type="submit" class="btn btn-success">परिणाम जाँच गर्नुहोस्</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
+
+{% endblock %}

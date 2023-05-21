@@ -1,0 +1,268 @@
+<form method="POST" enctype="multipart/form-data" id="inputform" name="form1" class="dropzone">
+    {% csrf_token %}
+    <label for="audio_file">Upload audio file:</label>
+  
+     <input type="text" name="product_title" id="product_title" placeholder="Give your product a name">
+     <h4>Price</h4>
+     <input type="text" name="product_price" id="product_price" placeholder="0.00">
+     <h4>Description</h4>
+     <input type="text" name="product_description" id="product_description" placeholder="Write a description about your product">
+     <button type="submit" id="add">Save</button>
+   </form>
+
+
+
+   <div class="col-lg-12" style="margin-bottom: 6rem;">
+    <a id="errormess">
+   
+  
+      <h2>CHECK GENRE</h2>
+      <div class="p-heading p-large">Here you can drag and drop your music file or click on the area and upload your music file to check genre of the music.</div>
+  </div> <!-- end of col -->
+  
+  <form method="post" enctype="multipart/form-data" id="inputform"  action="predictor/">
+    {% csrf_token %}
+    <label for="audio_file">Upload audio file:</label>
+    <input type="file" name="audio_file" id="audio_file" />
+    <button type="submit">Submit</button>
+  </form>
+  
+
+
+ 
+
+ 
+
+   
+    
+
+  
+  <div class="row demo-wrap">
+    <div class="col-sm-12 col-md-7 mx-auto">
+          <h3>PROVIDING<span>Opportunity</span></h3>
+          <p>Because all kids deserve the chance to experience the joy of sports. </p>
+       </div>
+    </div>
+</div>
+
+
+<img src={% static "predictor/babycry.jpg" %}
+
+
+<div class="row">
+  <div class="col-md-3">
+    <img src="your-image.png">
+  </div>
+  <div class="col-md-3">
+    <img src="your-image.png">
+  </div>
+  <div class="col-md-3">
+    <img src="your-image.png">
+  </div>
+  <div class="col-md-3">
+    <img src="your-image.png">
+  </div>
+  <div class="col-md-3">
+    <img src="your-image.png">
+  </div>
+</div>
+
+
+<div class="container">
+  <h2>Show Result</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Small Modal</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>{{genre}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+resultpage
+
+
+{% extends 'predictor/base.html' %}
+
+{% load static %}
+{% include 'predictor/home.html' %}
+this is result
+<h1>{{genre}}</h1>
+
+{% block content %}
+
+
+
+
+
+
+ <!-- Modal -->
+ <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>This is a small modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  {% endblock %}
+
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resultsModal">
+    Show Results
+  </button>
+  
+  <div class="modal fade" id="resultsModal" tabindex="-1" aria-labelledby="resultsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="resultsModalLabel">Results</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         
+        </div>
+        <div id="result"></div> 
+      </div>
+    </div>
+  </div>
+
+
+  {% extends "base.html" %}
+
+{% block content %}
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resultsModal">
+  Show Results
+</button>
+
+<div class="modal fade" id="resultsModal" tabindex="-1" aria-labelledby="resultsModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resultsModalLabel">Results</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>The machine learning model has determined that the audio file is:</p>
+        <ul>
+          <li>Category 1</li>
+          <li>Category 2</li>
+          <li>Category 3</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resultsModal">
+  Show Results
+</button>
+
+<div class="modal fade" id="resultsModal" tabindex="-1" aria-labelledby="resultsModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resultsModalLabel">Results</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>The machine learning model has determined that the audio file is:</p>
+        <ul>
+          <li>Category 1</li>
+          <li>Category 2</li>
+          <li>Category 3</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Grid row-->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-12 py-5">
+        <div class="mb-5 flex-center">
+
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Pinterest-->
+          <a class="pin-ic">
+            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+          </a>
+        </div>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+{% endblock %}

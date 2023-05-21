@@ -1,0 +1,79 @@
+{% extends 'predictor/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+{% include 'predictor/navbar.html' %}
+
+
+<div class="row demo-wrap " \>
+  <!-- Write your comments here <div id="load" class="col-sm-12 col-md-7 mx-auto">
+       
+          <h3> Baby cry<span>ClassifySystem</span></h3>
+          <p>Because everyone needs to know the reasons. </p>
+          <div class="d-flex justify-content-center">
+            <button class="btn btn-success">Find Reason</button>
+          </div>
+       </div>-->
+
+  <div class="waviy">
+    <span style="--i:1">B</span>
+    <span style="--i:2">A</span>
+    <span style="--i:3">B</span>
+    <span style="--i:4">y</span>
+    <span style="--i:5">c</span>
+    <span style="--i:6">r</span>
+    <span style="--i:7">y</span>
+    <span style="--i:8">c</span>
+    <span style="--i:8">l</span>
+    <span style="--i:8">a</span>
+    <span style="--i:8">s</span>
+    <span style="--i:8">s</span>
+    <span style="--i:8">i</span>
+    <span style="--i:8">f</span>
+    <span style="--i:8">i</span>
+    <span style="--i:8">e</span>
+    <span style="--i:8">r</span>
+    <!-- <p > A place that finds why your baby is crying</p> -->
+    <h2 class = "text-white">नमस्कार तपाईंलाई स्वागत छ </h2>
+
+    
+
+    <div class=" buttons d-flex justify-content-center">
+      <a class="btn btn-primary" href="#soundupload" >Get Started</a>
+    </div>
+
+
+
+  </div>
+</div>
+
+
+<div class="finder">
+  {% include 'predictor/index.html' %}
+</div>
+
+
+ <!-- Modal -->
+ <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <h1>{{genre}}</h1>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{% include 'predictor/footer.html' %}
+
+{% endblock %}

@@ -1,0 +1,52 @@
+
+  {% extends "predictor/home.html" %}
+
+  {% load static %}
+
+{% block content %}
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resultsModal">
+  परिणाम हेर्नुहोस
+</button>
+
+<div class="modal fade" id="resultsModal" tabindex="-1" aria-labelledby="resultsModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resultsModalLabel" style="font-family: 'Preeti'">परिणाम </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- <p>The machine learning model has determined that the audio file is:</p> -->
+        <!-- <h1>{{genre}}</h1> -->
+
+
+{% if genre == "sleepy" %}
+<h1 style="font-family: 'Preeti'">बच्चालाई निद्रा लाएको छ</h1>
+{% elif genre == "hungry" %}
+<h1 style="font-family: 'Preeti'">बच्चालाई भोक लाएको छ</h1>
+{% elif genre == "uncomfortable" %}
+<h1 style="font-family: 'Preeti'">बच्चालाई असहज महसुज भएको छ</h1>
+{% else %}
+<h1 style="font-family: 'Preeti'">
+  माफ गर्नुहोला हामीले बच्चा रोएको कारण पत्ता लगाउँन सकेनौ
+</h1>
+
+{% endif %}
+      </div>
+      <div class="modal-footer">
+       
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+        <a class="btn btn-secondary" href="{% url 'index' %}">Close</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
+
+
+
+
+
