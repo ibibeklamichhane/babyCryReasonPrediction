@@ -1,4 +1,4 @@
-# BabyCryReasonPredictio
+# BabyCryReasonPrediction
 
 
 A web based app to predict the reason why an infant is crying.Prediction takes place when users upload the audio files to get the result given by the model
