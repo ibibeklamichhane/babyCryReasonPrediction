@@ -9,7 +9,7 @@ This predict the classes which are  Hungry,Sleepy and uncomfortable.
 - Python ,Django,Bootstrap
   
 
-  #Process Involved:
+# Process Involved:
 - We Used a SVM to train the model and accuracy of around 91 % was achieved in comparision to other training methods.
 - Training datasets were collected manually as far as possible along with some dataset form kaggle.
 - 
