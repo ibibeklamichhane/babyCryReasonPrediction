@@ -10,7 +10,7 @@ This predict the classes which are  Hungry,Sleepy and uncomfortable.
   
 
 # Process Involved:
-- We Used a SVM to train the model and accuracy of around 91 % was achieved in comparision to other training methods.
+- We Used SVM to train the model and accuracy of around 91 % was achieved in comparision to other training methods.
 - Training datasets were collected manually as far as possible along with some dataset form kaggle.
 - 
 ![Screenshot from 2023-05-25 13-57-58](https://github.com/ibibeklamichhane/babyCryReasonPrediction/assets/46773730/aeb79c65-80e2-4203-b092-059c17eca0cc)
