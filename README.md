@@ -3,7 +3,7 @@
 
 A Machine Learning app to predict the reason why an infant is crying.Prediction takes place when a users upload the audio files to get the result given by the model
 
-This predict the classes which are  Hungry,Sleepy and uncomfortable.
+This predict the classes which are  Hungry,Sleepy and uncomfortable ,Discomfort
 
 # Created with 
 - Python ,Django,Bootstrap
